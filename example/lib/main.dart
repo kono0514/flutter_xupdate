@@ -245,7 +245,7 @@ class _MyAppState extends State<MyApp> {
 
   ///默认App更新
   void checkUpdateDefault() {
-    FlutterXUpdate.checkUpdate(url: _updateUrl, theme: 2, locale: 'mn');
+    FlutterXUpdate.checkUpdate(url: _updateUrl, theme: 0, locale: 'mn');
   }
 
   ///默认App更新 + 支持后台更新

@@ -66,7 +66,7 @@ public class FlutterUpdatePrompter implements IUpdatePrompter {
     }
 
     @NonNull
-    Resources getLocalizedResources(Context context, Locale desiredLocale) {
+    private Resources getLocalizedResources(Context context, Locale desiredLocale) {
         if (Build.VERSION.SDK_INT >= 17) {
             Configuration conf = context.getResources().getConfiguration();
             conf = new Configuration(conf);
