@@ -145,7 +145,7 @@ class _MyAppState extends State<MyApp> {
                   mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
                   children: <Widget>[
                     RaisedButton(
-                      child: Text('默认App更新'),
+                      child: Text('Check Update Regular'),
                       color: Colors.blue,
                       onPressed: checkUpdateDefault,
                     ),
@@ -214,7 +214,7 @@ class _MyAppState extends State<MyApp> {
                 )),
                 autoFitWidget(ButtonBar(
                   alignment:
-                  MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
+                      MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
                   mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
                   children: <Widget>[
                     RaisedButton(
@@ -245,7 +245,7 @@ class _MyAppState extends State<MyApp> {
 
   ///默认App更新
   void checkUpdateDefault() {
-    FlutterXUpdate.checkUpdate(url: _updateUrl);
+    FlutterXUpdate.checkUpdate(url: _updateUrl, theme: 2, locale: 'mn');
   }
 
   ///默认App更新 + 支持后台更新
@@ -295,10 +295,13 @@ class _MyAppState extends State<MyApp> {
     FlutterXUpdate.updateByInfo(updateEntity: customParseJson(_customJson));
   }
 
-
   ///自定义更新弹窗样式
   void customPromptDialog() {
-    FlutterXUpdate.checkUpdate(url: _updateUrl, themeColor: '#FFFFAC5D', topImageRes: 'bg_update_top', buttonTextColor: '#FFFFFFFF');
+    FlutterXUpdate.checkUpdate(
+      url: _updateUrl,
+      themeColor: '#FFFFAC5D',
+      topImageRes: 'bg_update_top',
+      buttonTextColor: '#FFFFFFFF',
+    );
   }
-
 }

@@ -96,6 +96,12 @@ class FlutterXUpdate {
       ///应用弹窗的主题色
       String themeColor = '',
 
+      /// Theme 0 = System, 1 = Light, 2 = Dark
+      int theme = 0,
+
+      /// Locale '' = System, 'en' = EN etc...
+      String locale = '',
+
       ///应用弹窗的顶部图片资源名
       String topImageRes = '',
 
@@ -128,6 +134,8 @@ class FlutterXUpdate {
       "isAutoMode": isAutoMode,
       "isCustomParse": isCustomParse,
       "themeColor": themeColor,
+      "theme": theme,
+      "locale": locale,
       "topImageRes": topImageRes,
       "buttonTextColor": buttonTextColor,
       "widthRatio": widthRatio,
@@ -152,6 +160,12 @@ class FlutterXUpdate {
 
       ///应用弹窗的主题色
       String themeColor = '',
+
+      ///Theme 0 = System, 1 = Light, 2 = Dark
+      int theme = 0,
+
+      /// Locale '' = System, 'en' = EN etc...
+      String locale = '',
 
       ///应用弹窗的顶部图片资源名
       String topImageRes = '',
@@ -183,6 +197,8 @@ class FlutterXUpdate {
       "supportBackgroundUpdate": supportBackgroundUpdate,
       "isAutoMode": isAutoMode,
       "themeColor": themeColor,
+      "theme": theme,
+      "locale": locale,
       "topImageRes": topImageRes,
       "buttonTextColor": buttonTextColor,
       "widthRatio": widthRatio,

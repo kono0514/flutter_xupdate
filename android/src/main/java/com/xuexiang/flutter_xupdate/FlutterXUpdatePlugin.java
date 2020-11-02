@@ -156,6 +156,8 @@ public class FlutterXUpdatePlugin implements FlutterPlugin, ActivityAware, Metho
         boolean supportBackgroundUpdate = call.argument("supportBackgroundUpdate");
         boolean isAutoMode = call.argument("isAutoMode");
         boolean isCustomParse = call.argument("isCustomParse");
+        String locale = call.argument("locale");
+        int theme = call.argument("theme");
         String themeColor = call.argument("themeColor");
         String topImageRes = call.argument("topImageRes");
         String buttonTextColor = call.argument("buttonTextColor");
@@ -167,6 +169,8 @@ public class FlutterXUpdatePlugin implements FlutterPlugin, ActivityAware, Metho
         boolean enableRetry = call.argument("enableRetry");
         String retryContent = call.argument("retryContent");
         String retryUrl = call.argument("retryUrl");
+
+        XUpdate.get().setIUpdatePrompter(new FlutterUpdatePrompter(locale, theme));
 
         UpdateManager.Builder builder = XUpdate.newBuild(mActivity.get())
                 .updateUrl(url)
@@ -200,6 +204,8 @@ public class FlutterXUpdatePlugin implements FlutterPlugin, ActivityAware, Metho
 
         boolean supportBackgroundUpdate = call.argument("supportBackgroundUpdate");
         boolean isAutoMode = call.argument("isAutoMode");
+        String locale = call.argument("locale");
+        int theme = call.argument("theme");
         String themeColor = call.argument("themeColor");
         String topImageRes = call.argument("topImageRes");
         String buttonTextColor = call.argument("buttonTextColor");
@@ -212,6 +218,7 @@ public class FlutterXUpdatePlugin implements FlutterPlugin, ActivityAware, Metho
         String retryContent = call.argument("retryContent");
         String retryUrl = call.argument("retryUrl");
 
+        XUpdate.get().setIUpdatePrompter(new FlutterUpdatePrompter(locale, theme));
 
         UpdateManager.Builder builder = XUpdate.newBuild(mActivity.get())
                 .isAutoMode(isAutoMode)
