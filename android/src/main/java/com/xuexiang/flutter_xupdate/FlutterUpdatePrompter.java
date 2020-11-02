@@ -103,7 +103,7 @@ public class FlutterUpdatePrompter implements IUpdatePrompter {
 
         String updateInfo = "";
         if (!TextUtils.isEmpty(targetSize)) {
-            updateInfo = localeResources.getString(R.string.xupdate_lab_new_version_size) + targetSize + "\n";
+            updateInfo = localeResources.getString(R.string.xupdate_lab_new_version_size) + targetSize + "\n\n";
         }
         if (!TextUtils.isEmpty(updateContent)) {
             updateInfo += updateContent;
