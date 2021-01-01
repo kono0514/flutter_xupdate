@@ -1,3 +1,13 @@
+## 1.0.2
+
+* Fix the problem that the progress is not updated
+
+## 1.0.1
+
+* Optimize version update UI
+* Solve the problem of memory leak
+* Support for setting request timeout response time
+
 ## 1.0.0
 
 * Support button text color modification
