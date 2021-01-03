@@ -37,6 +37,9 @@ class UpdateEntity {
   ///apk文件的加密值（这里默认是md5值）
   final String apkMd5;
 
+  ///Show notification while downloading, only in custom parser
+  final bool showNotification;
+
   UpdateEntity({
     @required this.hasUpdate,
     this.isForce,
@@ -47,6 +50,7 @@ class UpdateEntity {
     @required this.downloadUrl,
     this.apkSize,
     this.apkMd5,
+    this.showNotification = false,
   });
 
   Map<String, dynamic> toMap() {
@@ -60,6 +64,7 @@ class UpdateEntity {
       'downloadUrl': downloadUrl,
       'apkSize': apkSize,
       'apkMd5': apkMd5,
+      'showNotification': showNotification,
     };
   }
 
@@ -76,6 +81,7 @@ class UpdateEntity {
       downloadUrl: map['downloadUrl'],
       apkSize: map['apkSize']?.toInt(),
       apkMd5: map['apkMd5'],
+      showNotification: map['showNotification'],
     );
   }
 
@@ -85,6 +91,6 @@ class UpdateEntity {
 
   @override
   String toString() {
-    return 'UpdateEntity hasUpdate: $hasUpdate, isForce: $isForce, isIgnorable: $isIgnorable, versionCode: $versionCode, versionName: $versionName, updateContent: $updateContent, downloadUrl: $downloadUrl, apkSize: $apkSize, apkMd5: $apkMd5';
+    return 'UpdateEntity hasUpdate: $hasUpdate, isForce: $isForce, isIgnorable: $isIgnorable, versionCode: $versionCode, versionName: $versionName, updateContent: $updateContent, downloadUrl: $downloadUrl, apkSize: $apkSize, apkMd5: $apkMd5, showNotification: $showNotification';
   }
 }

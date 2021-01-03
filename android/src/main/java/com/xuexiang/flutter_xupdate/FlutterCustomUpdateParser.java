@@ -76,13 +76,15 @@ public class FlutterCustomUpdateParser implements IUpdateParser {
         String versionName = (String) map.get("versionName");
         String updateContent = (String) map.get("updateContent");
         String downloadUrl = (String) map.get("downloadUrl");
+        boolean showNotification = (boolean) map.get("showNotification");
 
         UpdateEntity updateEntity = new UpdateEntity();
         updateEntity.setHasUpdate(hasUpdate)
                 .setVersionCode(versionCode)
                 .setVersionName(versionName)
                 .setUpdateContent(updateContent)
-                .setDownloadUrl(downloadUrl);
+                .setDownloadUrl(downloadUrl)
+                .setShowNotification(showNotification);
 
         Object isForce = map.get("isForce");
         Object isIgnorable = map.get("isIgnorable");
